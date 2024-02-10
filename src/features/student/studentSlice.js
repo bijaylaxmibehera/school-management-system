@@ -46,7 +46,7 @@ export const studentSlice = createSlice({
     },
     [addStudentAsync.fulfilled]:(state,action)=>{
         state.status='success';
-        state.students=push(action.payload);
+        state.students.push(action.payload);
     },
     [addStudentAsync.rejected]:(state,action)=>{
         state.status='error';
