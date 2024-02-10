@@ -9,7 +9,7 @@ export const fetchStudents = createAsyncThunk(
       'https://795f9c15-fbc2-40ae-a028-7ded7ad52910-00-3tmkbw4oh0jfl.pike.replit.dev/api/v1/students'
     )
 
-    return response.students
+    return response.data.students
   }
 );
 
