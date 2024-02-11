@@ -8,6 +8,7 @@ export const StudentForm = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const student = location.state ? location.state : null;
+  console.log(student)
 
   const initialState = student
     ? {
@@ -43,7 +44,7 @@ export const StudentForm = () => {
       dispatch(
         updateStudentSync({ id: student._id, updatedStudent: formData })
       );
-      navigate(`/student/${student._id}`);
+      navigate(`/students/${student._id}`);
     } else {
       dispatch(addStudentAsync(formData));
       setFormData(initialState);
@@ -113,7 +114,7 @@ export const StudentForm = () => {
         </div>
         <div>
           <label>Standard: </label>
-          <select value={standard} onChange={handleChange} required>
+          <select value={standard} onChange={handleChange} required name="standard">
             <option value="I">Std I</option>
             <option value="II">Std II</option>
             <option value="III">Std III</option>
@@ -130,7 +131,7 @@ export const StudentForm = () => {
         </div>
         <div>
           <label>Grade: </label>
-          <select value={grade} onChange={handleChange} required>
+          <select value={grade} onChange={handleChange} required name="grade">
             <option value="O">O</option>
             <option value="A+">A+</option>
             <option value="A">A</option>

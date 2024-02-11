@@ -7,6 +7,7 @@ import { ClassView } from './components/ClassView';
 import './App.css';
 import { Home } from './components/Home';
 import { StudentForm } from './features/student/StudentForm';
+import { StudentDetails } from './features/student/StudentDetail';
 
 function App() {
   return (
@@ -40,6 +41,8 @@ function App() {
         <Route path='/classes' element={<ClassView/>}/>
         <Route path='/school' element={<SchoolView/>}/>
         <Route path='/students/add' element={<StudentForm/>}/>
+        <Route path='/students/edit/:id' element={<StudentForm/>}/>
+        <Route path='/students/:id' element={<StudentDetails/>}/>
 
       </Routes>
     </div>
