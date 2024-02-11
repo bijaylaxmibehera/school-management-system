@@ -6,6 +6,7 @@ import { SchoolView } from './components/SchoolView';
 import { ClassView } from './components/ClassView';
 import './App.css';
 import { Home } from './components/Home';
+import { StudentForm } from './features/student/StudentForm';
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
         <Route path='/teacher' element={<TeacherView/>}/>
         <Route path='/classes' element={<ClassView/>}/>
         <Route path='/school' element={<SchoolView/>}/>
+        <Route path='/students/add' element={<StudentForm/>}/>
 
       </Routes>
     </div>

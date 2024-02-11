@@ -9,9 +9,7 @@ export const StudentList = ({ students }) => {
         {students.map((student) => (
           <li key={student._id}>
             <Link to={`/students/${student._id}`}>
-              <p>Name: {student.name}</p>
-              <p>Age: {student.age}</p>
-              <p>Grade: {student.grade}</p>
+            {student.name} (Age: {student.age}, Standard {student.standard})
             </Link>
           </li>
         ))}

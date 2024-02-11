@@ -21,6 +21,9 @@ export const StudentView=()=>{
           {status==='loading' && <p>Loading...</p>}
           {error && <p>Error:{error}</p>}
           <StudentList students={students}/>
+          <h3>
+            <Link to={`/students/add`}>Add student</Link>
+          </h3>
         </div>
     )
 }
