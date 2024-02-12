@@ -38,7 +38,7 @@ export const updateStudentSync = createAsyncThunk(
 
 export const deleteStudentAsync = createAsyncThunk(
   'students/deleteStudentAsync',
-  async id => {
+  async (id )=> {
     const response = await axios.delete(
       `https://795f9c15-fbc2-40ae-a028-7ded7ad52910-00-3tmkbw4oh0jfl.pike.replit.dev/api/v1/students/${id}`
     )
