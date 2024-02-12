@@ -8,7 +8,7 @@ export const StudentForm = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const student = location.state ? location.state : null;
-  console.log(student)
+  
 
   const initialState = student
     ? {

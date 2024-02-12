@@ -87,7 +87,7 @@ export const teacherSlice = createSlice({
       state.status = 'success'
       const updatedTeacher = action.payload
       const index = state.teachers.findIndex(
-        teacher => teacher.id === updatedTeacher._id
+        teacher => teacher._id === updatedTeacher._id
       )
       if (index !== -1) {
         state.teachers[index] = updatedTeacher

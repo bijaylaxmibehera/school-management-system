@@ -8,6 +8,8 @@ import './App.css';
 import { Home } from './components/Home';
 import { StudentForm } from './features/student/StudentForm';
 import { StudentDetails } from './features/student/StudentDetail';
+import { TeacherForm } from './features/teacher/TeacherForm';
+import { TeacherDetails } from './features/teacher/TeacherDetail';
 
 function App() {
   return (
@@ -22,7 +24,7 @@ function App() {
               <NavLink to="/students">students</NavLink>
             </li>
             <li>
-              <NavLink to="/teacher">teacher</NavLink>
+              <NavLink to="/teachers">teachers</NavLink>
             </li>
             <li>
               <NavLink to="/classes">class</NavLink>
@@ -37,13 +39,15 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/students' element={<StudentView/>}/>
-        <Route path='/teacher' element={<TeacherView/>}/>
+        <Route path='/teachers' element={<TeacherView/>}/>
         <Route path='/classes' element={<ClassView/>}/>
         <Route path='/school' element={<SchoolView/>}/>
         <Route path='/students/add' element={<StudentForm/>}/>
         <Route path='/students/edit/:id' element={<StudentForm/>}/>
         <Route path='/students/:id' element={<StudentDetails/>}/>
-
+        <Route path='/teachers/add' element={<TeacherForm/>}/>
+        <Route path='/teachers/:id' element={<TeacherDetails/>}/>
+        <Route path='/teachers/edit/:id' element={<TeacherForm/>}/>
       </Routes>
     </div>
   );
