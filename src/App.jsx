@@ -32,6 +32,12 @@ function App() {
             <li>
               <NavLink to="/school">school</NavLink>
             </li>
+            <li>
+              <NavLink to="https://github.com/bijaylaxmibehera/school-management-system" target='_blank'>Git repo</NavLink>
+            </li>
+            <li>
+              <NavLink to="https://replit.com/@Bijaylaxmi2117/school-management-api?v=1" target='_blank'>API</NavLink>
+            </li>
           </ul>
         </nav>
       </div>
